@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Name</td>
+    </tr>
+    <tr>
+        <td>Email</td><td>Auth::user()->name</td>
+    </tr>
+    <tr>
+        <td>Mobile</td><td>Auth::user()->mobile</td>
+    </tr>
+    <tr>
+       <form method="post" action="editprofile">
+        @csrf
+       <input type="text" name="id" value="{{Auth::user()->id}}" hidden="hidden">
+       <input type="submit">
+       </form>
+    </tr>
+</table>
+</body>
+</html>
